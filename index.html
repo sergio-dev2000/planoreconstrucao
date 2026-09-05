@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plano de Reconstrução da Identidade (30 Dias) | Prof. Sérgio Lourenço</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --bg-card: #121827;
+      --bg-card-hover: #1a2235;
+      --primary-cyan: #00f2fe;
+      --primary-blue: #4facfe;
+      --accent-coral: #ff4b2b;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+    }
+
+    .text-gradient-primary {
+      background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-accent {
+      background: linear-gradient(135deg, #ff416c 0%, var(--accent-coral) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-card {
+      background: rgba(18, 24, 39, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(0, 242, 254, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-tech-cta {
+      background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+      color: #fff;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: none;
+      border-radius: 50px;
+      padding: 18px 36px;
+      box-shadow: 0 0 30px rgba(0, 198, 255, 0.4);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .btn-tech-cta:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 50px rgba(0, 198, 255, 0.7);
+      color: #fff;
+    }
+
+    .hero-section {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .accordion-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px !important;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .accordion-button {
+      background: var(--bg-card);
+      color: var(--text-main);
+      font-weight: 600;
+      box-shadow: none !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: var(--bg-card-hover);
+      color: var(--primary-cyan);
+    }
+
+    .accordion-button::after {
+      filter: invert(1);
+    }
+
+    .badge-tech {
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      color: var(--primary-cyan);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app-root">
+    
+    <header class="hero-section py-5 position-relative overflow-hidden">
+      <div class="container py-lg-4">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-10 col-xl-9">
+            <span class="badge-tech mb-3 d-inline-block">
+              <i class="bi bi-shield-check me-2"></i>Sistema de Engenharia Comportamental
+            </span>
+            <h1 class="display-3 fw-black text-white mb-3">
+              NÃO É MOTIVAÇÃO.<br />
+              <span class="text-gradient-primary">É RECONSTRUÇÃO!</span>
+            </h1>
+            <p class="fs-4 fw-semibold text-light mb-3">
+              O Plano Prático de 30 Dias para Recuperar o Foco, a Disciplina e o Controle da Sua Vida.
+            </p>
+            <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 680px;">
+              Saia da estagnação, elimine distrações e reconstrua sua identidade — mesmo que hoje você esteja desmotivado, sem rumo e sem força de vontade.
+            </p>
+            <div class="d-flex justify-content-center mb-4">
+              <a href="#checkout" class="btn-tech-cta fs-6 w-100 w-sm-auto">
+                <i class="bi bi-lightning-charge-fill"></i>
+                SIM! QUERO COMEÇAR MINHA RECONSTRUÇÃO HOJE
+              </a>
+            </div>
+            <div class="text-muted small d-flex align-items-center justify-content-center gap-4">
+              <span><i class="bi bi-lock-fill text-success me-1"></i> Compra 100% Segura</span>
+              <span><i class="bi bi-play-circle-fill text-info me-1"></i> Acesso Imediato</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-5 bg-black bg-opacity-40">
+      <div class="container py-4">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span class="text-gradient-accent fw-bold text-uppercase tracking-wider">Identificação Profunda</span>
+            <h2 class="display-5 fw-bold text-white mt-2">Você Se Reconhece Nessa Situação?</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card p-4 h-100">
+              <i class="bi bi-arrow-repeat fs-1 text-danger mb-3 d-block"></i>
+              <h5 class="text-white fw-bold">Piloto Automático</h5>
+              <p class="text-muted mb-0">Sente que vive no automático, sem clareza sobre o futuro ou direção concreta?</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card p-4 h-100">
+              <i class="bi bi-x-circle fs-1 text-danger mb-3 d-block"></i>
+              <h5 class="text-white fw-bold">Ciclos Inacabados</h5>
+              <p class="text-muted mb-0">Já tentou mudar hábitos dezenas de vezes, mas sempre parou exatamente no meio do caminho?</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card p-4 h-100">
+              <i class="bi bi-hourglass-bottom fs-1 text-danger mb-3 d-block"></i>
+              <h5 class="text-white fw-bold">Dreno de Tempo</h5>
+              <p class="text-muted mb-0">Perde tempo com distrações e chega ao final do dia sentindo que não produziu nada importante?</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card p-4 h-100">
+              <i class="bi bi-exclamation-triangle fs-1 text-danger mb-3 d-block"></i>
+              <h5 class="text-white fw-bold">Efeito Sanfona</h5>
+              <p class="text-muted mb-0">Cansou de promessas superficiais que não duram e de métodos teóricos que falham?</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-10">
+            <div class="glass-card p-4 text-center border-danger border-opacity-25" style="background: rgba(255, 75, 43, 0.05);">
+              <h4 class="text-white fw-bold mb-0">
+                🛑 A culpa não é sua. Você só nunca teve um sistema estruturado para reconstruir os alicerces da sua vida — só motivação passageira.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="glass-card p-4 p-md-5">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-4 text-center">
+              <div class="position-relative d-inline-block">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOrssVjpxb9qULe5e7ed7JEWyNXOiFa3oNbjTHWaw-01KkeZsh8SKXMr_7XanQNbNxHpUHQePj14LvskzbY-H1OMrvmCjMQbHPiUPq0aW3KigMzVuqu3uftldxHZKgCTNppmRgHnX1m_vcivjqioTEXLXlWddAZGpmpA517fDOvMHu0dzZU2Yt7hk6PdY_/s320/wmremove-transformed%20(3).jpeg" alt="Prof. Sérgio Lourenço" class="img-fluid rounded-4 border border-info shadow-lg" style="max-height: 380px; object-fit: cover;" />
+                <span class="position-absolute bottom-0 start-50 translate-middle-x badge bg-info text-dark font-heading px-3 py-2 rounded-pill shadow">
+                  Prof. Sérgio Lourenço
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <span class="badge-tech mb-2">Mentor & Fundador</span>
+              <h2 class="display-6 fw-bold text-white mb-3">Conheça o Professor Sérgio Lourenço</h2>
+              <p class="text-light lead mb-4">
+                Especialista em desenvolvimento humano, identidade e disciplina, com 26 anos de experiência e ligado à Faculdade de Ciências e Tecnologia.
+              </p>
+              <ul class="list-unstyled text-muted fs-6 mb-4">
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill text-info me-3 fs-5"></i>
+                  <span>Ajudou milhares de pessoas — profissionais, líderes e empreendedores — a retomarem o controle da própria vida.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill text-info me-3 fs-5"></i>
+                  <span>Cria métodos práticos, testados e orientados a resultados reais, não teoria vazia.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill text-info me-3 fs-5"></i>
+                  <span>Acredita que qualquer um pode se reconstruir, desde que tenha o caminho certo.</span>
+                </li>
+              </ul>
+              <blockquote class="border-start border-3 border-info ps-3 text-light fst-italic m-0">
+                “Eu desenvolvi esse plano porque também passei pelo caos. Se eu pude recomeçar, você também pode.”
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-black bg-opacity-30">
+      <div class="container py-4">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+          <span class="badge-tech mb-2">Metodologia Aplicada</span>
+          <h2 class="display-5 fw-bold text-white">Engenharia Comportamental em 4 Semanas</h2>
+          <p class="text-muted fs-5">Um sistema desenhado cientificamente para reformular seus padrões mentais.</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card p-4 h-100 border-top border-4 border-info">
+              <span class="text-info fw-bold font-heading">SEMANA 01</span>
+              <h4 class="text-white fw-bold mt-2">As 4 Fundações</h4>
+              <p class="text-muted small mb-0">Alinhamento, corpo, energia e estruturação da nova rotina diária.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card p-4 h-100 border-top border-4 border-primary">
+              <span class="text-primary fw-bold font-heading">SEMANA 02</span>
+              <h4 class="text-white fw-bold mt-2">Forja da Disciplina</h4>
+              <p class="text-muted small mb-0">Blindagem de foco, otimização de ambiente e microvitórias diárias.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card p-4 h-100 border-top border-4 border-warning">
+              <span class="text-warning fw-bold font-heading">SEMANA 03</span>
+              <h4 class="text-white fw-bold mt-2">Confiança por Evidência</h4>
+              <p class="text-muted small mb-0">Enfrentamento do desconforto, resiliência e evolução de 1% ao dia.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="glass-card p-4 h-100 border-top border-4 border-success">
+              <span class="text-success fw-bold font-heading">SEMANA 04</span>
+              <h4 class="text-white fw-bold mt-2">Reinvenção Final</h4>
+              <p class="text-muted small mb-0">Eliminação de gargalos residuais e consolidação da nova identidade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold text-white">O Que Você Vai Receber</h2>
+          <p class="text-muted">Acesso imediato e vitalício a todo o ecossistema do programa</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex gap-3">
+              <i class="bi bi-play-btn-fill fs-2 text-info"></i>
+              <div>
+                <h5 class="text-white fw-bold">Curso em Vídeo Aulas</h5>
+                <p class="text-muted small mb-0">Acesso vitalício, direto ao ponto, para assistir no seu ritmo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex gap-3">
+              <i class="bi bi-journal-richtext fs-2 text-info"></i>
+              <div>
+                <h5 class="text-white fw-bold">Apostila Digital Detalhada</h5>
+                <p class="text-muted small mb-0">Material de apoio completo para estudar, marcar e consultar.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex gap-3">
+              <i class="bi bi-diagram-3-fill fs-2 text-info"></i>
+              <div>
+                <h5 class="text-white fw-bold">Mapa Mental da Jornada</h5>
+                <p class="text-muted small mb-0">Visualização macro de toda a sua evolução em um só olhar.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex gap-3">
+              <i class="bi bi-file-earmark-bar-graph-fill fs-2 text-info"></i>
+              <div>
+                <h5 class="text-white fw-bold">Infográficos Práticos</h5>
+                <p class="text-muted small mb-0">Resumos visuais para rápida fixação de cada tarefa diária.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex gap-3">
+              <i class="bi bi-mic-fill fs-2 text-info"></i>
+              <div>
+                <h5 class="text-white fw-bold">Podcasts/Áudios Complementares</h5>
+                <p class="text-muted small mb-0">Conteúdo em áudio para ouvir no trânsito, treino ou momentos livres.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex gap-3 border-info">
+              <i class="bi bi-star-fill fs-2 text-warning"></i>
+              <div>
+                <h5 class="text-white fw-bold">Diferencial Exclusivo</h5>
+                <p class="text-muted small mb-0">Você não aprende só o que fazer — entende por que funciona e como manter para sempre.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-black bg-opacity-40">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="badge-tech mb-2">Transformações Reais</span>
+          <h2 class="display-5 fw-bold text-white">Quem Aplicou, Aprovou</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="glass-card p-4 h-100">
+              <div class="text-warning mb-2">★★★★★</div>
+              <p class="text-light fst-italic">“Eu estava parado há anos, sem saber para onde ir. Esse método me devolveu o rumo e a confiança.”</p>
+              <span class="text-muted fw-bold d-block">— Maria, 38 anos</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass-card p-4 h-100">
+              <div class="text-warning mb-2">★★★★★</div>
+              <p class="text-light fst-italic">“Tentava de tudo e nunca conseguia manter a disciplina. Em 30 dias já sentia a diferença na rotina.”</p>
+              <span class="text-muted fw-bold d-block">— Carlos, 45 anos</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass-card p-4 h-100">
+              <div class="text-warning mb-2">★★★★★</div>
+              <p class="text-light fst-italic">“Não é autoajuda genérica: é estrutura, método e resultado. O melhor investimento que fiz em mim.”</p>
+              <span class="text-muted fw-bold d-block">— Juliana, empresária</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="glass-card p-5 text-center position-relative overflow-hidden border-success border-opacity-50">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <i class="bi bi-shield-check display-1 text-success mb-3 d-block"></i>
+              <h2 class="display-6 fw-bold text-white mb-3">Garantia Incondicional de 7 Dias!</h2>
+              <p class="text-light fs-5 mb-4">
+                Se você aplicar o método e não sentir mudança real em sua clareza, foco e rotina em até 7 dias, eu devolvo 100% do seu dinheiro.
+              </p>
+              <p class="text-muted small mb-0">Sem perguntas, sem burocracia, sem complicações. Sua decisão está absolutamente segura.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-black bg-opacity-30">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold text-white">Perguntas Frequentes</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Para quem serve esse plano?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Para qualquer pessoa que se sinta perdida, desmotivada ou estagnada e queira reconstruir sua vida com método e seriedade.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Não tenho muito tempo, funciona mesmo?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Sim! Foi desenhado para ser aplicado em poucos minutos por dia — prático para rotinas apertadas.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Como eu recebo o material?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    Tudo liberado imediatamente na sua área de membros da Hotmart — acesso vitalício.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    Preciso de experiência anterior?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    De forma nenhuma! É tudo passo a passo, direto ao ponto, fácil de seguir.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checkout" class="py-5 text-center position-relative">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2 class="display-4 fw-black text-white mb-4">
+              Comece Hoje a Construir Sua Versão Forte, Focada e Vitoriosa
+            </h2>
+            <p class="fs-5 text-muted mb-4">
+              ⏳ Cada dia que passa sem rumo custa tempo, energia e oportunidades que não voltam. Você tem o método, tem minha experiência, tem garantia e tem tudo o que precisa para mudar em 30 dias.
+            </p>
+            <div class="mb-4">
+              <a href="https://pay.hotmart.com/C103770561B?off=k1ju57x0&hotfeature=51&_hi=eyJjaWQiOiIxNzY2MDY2NDg1NDIxMjIxMTkzMzIwNzIwNzQ4MzYiLCJiaWQiOiIxNzY2MDY2NDg1NDIxMjIxMTkzMzIwNzIwNzQ4MzYiLCJzaWQiOiJlYmRjYTRiYmJhYTg0YzAxOGE1NDUxM2IzMzdlYzM3NSJ9.1788372533801" class="btn-tech-cta fs-5 w-100 w-sm-auto">
+                <i class="bi bi-lightning-charge-fill"></i>
+                SIM! QUERO COMEÇAR MINHA RECONSTRUÇÃO HOJE
+                <i class="bi bi-rocket-takeoff-fill ms-2"></i>
+              </a>
+            </div>
+            <img src="https://logospng.org/logo-hotmart/" alt="" style="max-height: 40px; opacity: 0.7;" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 border-top border-secondary border-opacity-25 text-center text-muted small">
+      <div class="container">
+        <p class="mb-2">© 2026 — Professor Sérgio Lourenço | Todos os Direitos Reservados</p>
+        <div>
+          <a href="#" class="text-muted text-decoration-none me-3">Termos de Uso</a>
+          <a href="#" class="text-muted text-decoration-none me-3">Política de Privacidade</a>
+          <a href="#" class="text-muted text-decoration-none">Plataforma Hotmart</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
